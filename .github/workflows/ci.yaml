@@ -16,8 +16,8 @@ jobs:
     - name: Build & Push Reverse Proxy Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/reverseproxy:v5 ./udagram-reverseproxy
-        docker push henokhm/reverseproxy:v5
+        docker build -t henokhm/reverseproxy:v6 ./udagram-reverseproxy
+        docker push henokhm/reverseproxy:v6
 
 
   second_job:
@@ -29,8 +29,8 @@ jobs:
     - name: Build & Push Backend User Service Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-api-user:v5 ./udagram-api-user
-        docker push henokhm/udagram-api-user:v5
+        docker build -t henokhm/udagram-api-user:v6 ./udagram-api-user
+        docker push henokhm/udagram-api-user:v6
 
 
   third_job:
@@ -42,8 +42,8 @@ jobs:
     - name: Build & Push Backend Feed Service Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-api-feed:v5 ./udagram-api-feed
-        docker push henokhm/udagram-api-feed:v5
+        docker build -t henokhm/udagram-api-feed:v6 ./udagram-api-feed
+        docker push henokhm/udagram-api-feed:v6
 
 
   forth_job:
@@ -55,5 +55,5 @@ jobs:
     - name: Build & Push Frontend Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-frontend:v5 ./udagram-frontend
-        docker push henokhm/udagram-frontend:v5
+        docker build -t henokhm/udagram-frontend:v6 ./udagram-frontend
+        docker push henokhm/udagram-frontend:v6
