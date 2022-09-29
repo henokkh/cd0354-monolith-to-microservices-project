@@ -14,9 +14,14 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: henokhm/reverseproxy:v5
+        image: henokhm/reverseproxy:v6
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
 
 ---
 apiVersion: v1

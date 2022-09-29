@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: henokhm/udagram-api-feed:v5
+        image: henokhm/udagram-api-feed:v6
         ports:
         - containerPort: 80
         resources:
-          requests:
-            cpu: 200m
           limits:
             cpu: 500m
+          requests:
+            cpu: 200m
         envFrom:
           - configMapRef:
               name: env-config

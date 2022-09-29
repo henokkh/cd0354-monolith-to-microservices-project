@@ -14,9 +14,14 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: henokhm/udagram-frontend:v5
+        image: henokhm/udagram-frontend:v6
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
 
 ---
 apiVersion: v1
