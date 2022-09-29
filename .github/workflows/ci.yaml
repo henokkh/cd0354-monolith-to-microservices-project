@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build & Push Reverse Proxy Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/reverseproxy:v2 ./udagram-reverseproxy
-        docker push henokhm/reverseproxy:v2
+        docker build -t henokhm/reverseproxy:v3 ./udagram-reverseproxy
+        docker push henokhm/reverseproxy:v3
 
 
   second_job:
@@ -25,12 +25,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build & Push Backend User Service Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-api-user:v2 ./udagram-api-user
-        docker push henokhm/udagram-api-user:v2
+        docker build -t henokhm/udagram-api-user:v3 ./udagram-api-user
+        docker push henokhm/udagram-api-user:v3
 
 
   third_job:
@@ -38,12 +38,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build & Push Backend Feed Service Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-api-feed:v2 ./udagram-api-feed
-        docker push henokhm/udagram-api-feed:v2
+        docker build -t henokhm/udagram-api-feed:v3 ./udagram-api-feed
+        docker push henokhm/udagram-api-feed:v3
 
 
   forth_job:
@@ -51,9 +51,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build & Push Frontend Image to DockerHub
       run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker build -t henokhm/udagram-frontend:v2 ./udagram-frontend
-        docker push henokhm/udagram-frontend:v2
+        docker build -t henokhm/udagram-frontend:v3 ./udagram-frontend
+        docker push henokhm/udagram-frontend:v3
