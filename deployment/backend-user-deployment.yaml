@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: henokhm/udagram-api-user:v11
+        image: henokhm/udagram-api-user:v12
         ports:
         - containerPort: 80
         resources:
