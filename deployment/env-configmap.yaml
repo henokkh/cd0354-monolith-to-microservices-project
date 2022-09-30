@@ -3,10 +3,10 @@ kind: ConfigMap
 metadata:
   name: env-config
 data:
-   POSTGRES_USERNAME: postgres
-   POSTGRES_PASSWORD: postgres
-   POSTGRES_HOST: udagram-microservices.c1gna0utq5qm.us-east-2.rds.amazonaws.com
-   POSTGRES_DB: postgres
+   POSTGRES_USERNAME: henok
+   POSTGRES_PASSWORD: rufquinqdin
+   POSTGRES_HOST: 204.2.63.59
+   POSTGRES_DB: udagram-microservices
    AWS_BUCKET: udagram-microservices-project-bucket
    AWS_REGION: us-east-2
    AWS_PROFILE: default
