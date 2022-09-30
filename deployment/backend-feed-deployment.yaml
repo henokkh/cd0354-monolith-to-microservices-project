@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: henokhm/udagram-api-feed:10
+        image: henokhm/udagram-api-feed:v11
         ports:
         - containerPort: 80
         resources:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: henokhm/udagram-frontend:10
+        image: henokhm/udagram-frontend:v11
         ports:
         - containerPort: 80
         resources:

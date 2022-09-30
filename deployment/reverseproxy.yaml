@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: henokhm/reverseproxy:10
+        image: henokhm/reverseproxy:v11
         ports:
         - containerPort: 80
         resources:
